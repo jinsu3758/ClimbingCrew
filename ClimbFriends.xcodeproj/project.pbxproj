@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74E28DE8250F7EF300C497ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28DE7250F7EF300C497ED /* AppDelegate.swift */; };
+		74E28DEC250F7EF300C497ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28DEB250F7EF300C497ED /* ViewController.swift */; };
+		74E28DEF250F7EF300C497ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E28DED250F7EF300C497ED /* Main.storyboard */; };
+		74E28DF1250F7EF400C497ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E28DF0250F7EF400C497ED /* Assets.xcassets */; };
+		74E28DF4250F7EF400C497ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E28DF2250F7EF400C497ED /* LaunchScreen.storyboard */; };
+		74E28DFF250F7EF400C497ED /* ClimbFriendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28DFE250F7EF400C497ED /* ClimbFriendsTests.swift */; };
+		74E28E0A250F7EF400C497ED /* ClimbFriendsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28E09250F7EF400C497ED /* ClimbFriendsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74E28DFB250F7EF400C497ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74E28DDC250F7EF300C497ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74E28DE3250F7EF300C497ED;
+			remoteInfo = ClimbFriends;
+		};
+		74E28E06250F7EF400C497ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74E28DDC250F7EF300C497ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74E28DE3250F7EF300C497ED;
+			remoteInfo = ClimbFriends;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74E28DE4250F7EF300C497ED /* ClimbFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClimbFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E28DE7250F7EF300C497ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		74E28DEB250F7EF300C497ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74E28DEE250F7EF300C497ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		74E28DF0250F7EF400C497ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74E28DF3250F7EF400C497ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		74E28DF5250F7EF400C497ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E28DFA250F7EF400C497ED /* ClimbFriendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimbFriendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E28DFE250F7EF400C497ED /* ClimbFriendsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbFriendsTests.swift; sourceTree = "<group>"; };
+		74E28E00250F7EF400C497ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E28E05250F7EF400C497ED /* ClimbFriendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimbFriendsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E28E09250F7EF400C497ED /* ClimbFriendsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbFriendsUITests.swift; sourceTree = "<group>"; };
+		74E28E0B250F7EF400C497ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74E28DE1250F7EF300C497ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E28DF7250F7EF400C497ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E28E02250F7EF400C497ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74E28DDB250F7EF300C497ED = {
+			isa = PBXGroup;
+			children = (
+				74E28DE6250F7EF300C497ED /* ClimbFriends */,
+				74E28DFD250F7EF400C497ED /* ClimbFriendsTests */,
+				74E28E08250F7EF400C497ED /* ClimbFriendsUITests */,
+				74E28DE5250F7EF300C497ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74E28DE5250F7EF300C497ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74E28DE4250F7EF300C497ED /* ClimbFriends.app */,
+				74E28DFA250F7EF400C497ED /* ClimbFriendsTests.xctest */,
+				74E28E05250F7EF400C497ED /* ClimbFriendsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74E28DE6250F7EF300C497ED /* ClimbFriends */ = {
+			isa = PBXGroup;
+			children = (
+				74E28DE7250F7EF300C497ED /* AppDelegate.swift */,
+				74E28DEB250F7EF300C497ED /* ViewController.swift */,
+				74E28DED250F7EF300C497ED /* Main.storyboard */,
+				74E28DF0250F7EF400C497ED /* Assets.xcassets */,
+				74E28DF2250F7EF400C497ED /* LaunchScreen.storyboard */,
+				74E28DF5250F7EF400C497ED /* Info.plist */,
+			);
+			path = ClimbFriends;
+			sourceTree = "<group>";
+		};
+		74E28DFD250F7EF400C497ED /* ClimbFriendsTests */ = {
+			isa = PBXGroup;
+			children = (
+				74E28DFE250F7EF400C497ED /* ClimbFriendsTests.swift */,
+				74E28E00250F7EF400C497ED /* Info.plist */,
+			);
+			path = ClimbFriendsTests;
+			sourceTree = "<group>";
+		};
+		74E28E08250F7EF400C497ED /* ClimbFriendsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				74E28E09250F7EF400C497ED /* ClimbFriendsUITests.swift */,
+				74E28E0B250F7EF400C497ED /* Info.plist */,
+			);
+			path = ClimbFriendsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74E28DE3250F7EF300C497ED /* ClimbFriends */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74E28E0E250F7EF400C497ED /* Build configuration list for PBXNativeTarget "ClimbFriends" */;
+			buildPhases = (
+				74E28DE0250F7EF300C497ED /* Sources */,
+				74E28DE1250F7EF300C497ED /* Frameworks */,
+				74E28DE2250F7EF300C497ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClimbFriends;
+			productName = ClimbFriends;
+			productReference = 74E28DE4250F7EF300C497ED /* ClimbFriends.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74E28DF9250F7EF400C497ED /* ClimbFriendsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74E28E11250F7EF400C497ED /* Build configuration list for PBXNativeTarget "ClimbFriendsTests" */;
+			buildPhases = (
+				74E28DF6250F7EF400C497ED /* Sources */,
+				74E28DF7250F7EF400C497ED /* Frameworks */,
+				74E28DF8250F7EF400C497ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74E28DFC250F7EF400C497ED /* PBXTargetDependency */,
+			);
+			name = ClimbFriendsTests;
+			productName = ClimbFriendsTests;
+			productReference = 74E28DFA250F7EF400C497ED /* ClimbFriendsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		74E28E04250F7EF400C497ED /* ClimbFriendsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74E28E14250F7EF400C497ED /* Build configuration list for PBXNativeTarget "ClimbFriendsUITests" */;
+			buildPhases = (
+				74E28E01250F7EF400C497ED /* Sources */,
+				74E28E02250F7EF400C497ED /* Frameworks */,
+				74E28E03250F7EF400C497ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74E28E07250F7EF400C497ED /* PBXTargetDependency */,
+			);
+			name = ClimbFriendsUITests;
+			productName = ClimbFriendsUITests;
+			productReference = 74E28E05250F7EF400C497ED /* ClimbFriendsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74E28DDC250F7EF300C497ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = jinsu;
+				TargetAttributes = {
+					74E28DE3250F7EF300C497ED = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					74E28DF9250F7EF400C497ED = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 74E28DE3250F7EF300C497ED;
+					};
+					74E28E04250F7EF400C497ED = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 74E28DE3250F7EF300C497ED;
+					};
+				};
+			};
+			buildConfigurationList = 74E28DDF250F7EF300C497ED /* Build configuration list for PBXProject "ClimbFriends" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 74E28DDB250F7EF300C497ED;
+			productRefGroup = 74E28DE5250F7EF300C497ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74E28DE3250F7EF300C497ED /* ClimbFriends */,
+				74E28DF9250F7EF400C497ED /* ClimbFriendsTests */,
+				74E28E04250F7EF400C497ED /* ClimbFriendsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74E28DE2250F7EF300C497ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E28DF4250F7EF400C497ED /* LaunchScreen.storyboard in Resources */,
+				74E28DF1250F7EF400C497ED /* Assets.xcassets in Resources */,
+				74E28DEF250F7EF300C497ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E28DF8250F7EF400C497ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E28E03250F7EF400C497ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74E28DE0250F7EF300C497ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E28DEC250F7EF300C497ED /* ViewController.swift in Sources */,
+				74E28DE8250F7EF300C497ED /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E28DF6250F7EF400C497ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E28DFF250F7EF400C497ED /* ClimbFriendsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74E28E01250F7EF400C497ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74E28E0A250F7EF400C497ED /* ClimbFriendsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74E28DFC250F7EF400C497ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74E28DE3250F7EF300C497ED /* ClimbFriends */;
+			targetProxy = 74E28DFB250F7EF400C497ED /* PBXContainerItemProxy */;
+		};
+		74E28E07250F7EF400C497ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74E28DE3250F7EF300C497ED /* ClimbFriends */;
+			targetProxy = 74E28E06250F7EF400C497ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74E28DED250F7EF300C497ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74E28DEE250F7EF300C497ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		74E28DF2250F7EF400C497ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74E28DF3250F7EF400C497ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74E28E0C250F7EF400C497ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		74E28E0D250F7EF400C497ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74E28E0F250F7EF400C497ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HSKSVJPZJD;
+				INFOPLIST_FILE = ClimbFriends/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cf.ClimbFriends;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74E28E10250F7EF400C497ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HSKSVJPZJD;
+				INFOPLIST_FILE = ClimbFriends/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cf.ClimbFriends;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		74E28E12250F7EF400C497ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HSKSVJPZJD;
+				INFOPLIST_FILE = ClimbFriendsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cf.ClimbFriendsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClimbFriends.app/ClimbFriends";
+			};
+			name = Debug;
+		};
+		74E28E13250F7EF400C497ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HSKSVJPZJD;
+				INFOPLIST_FILE = ClimbFriendsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cf.ClimbFriendsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClimbFriends.app/ClimbFriends";
+			};
+			name = Release;
+		};
+		74E28E15250F7EF400C497ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HSKSVJPZJD;
+				INFOPLIST_FILE = ClimbFriendsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cf.ClimbFriendsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClimbFriends;
+			};
+			name = Debug;
+		};
+		74E28E16250F7EF400C497ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HSKSVJPZJD;
+				INFOPLIST_FILE = ClimbFriendsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cf.ClimbFriendsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClimbFriends;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74E28DDF250F7EF300C497ED /* Build configuration list for PBXProject "ClimbFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E28E0C250F7EF400C497ED /* Debug */,
+				74E28E0D250F7EF400C497ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74E28E0E250F7EF400C497ED /* Build configuration list for PBXNativeTarget "ClimbFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E28E0F250F7EF400C497ED /* Debug */,
+				74E28E10250F7EF400C497ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74E28E11250F7EF400C497ED /* Build configuration list for PBXNativeTarget "ClimbFriendsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E28E12250F7EF400C497ED /* Debug */,
+				74E28E13250F7EF400C497ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74E28E14250F7EF400C497ED /* Build configuration list for PBXNativeTarget "ClimbFriendsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E28E15250F7EF400C497ED /* Debug */,
+				74E28E16250F7EF400C497ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74E28DDC250F7EF300C497ED /* Project object */;
+}
