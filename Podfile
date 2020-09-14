@@ -6,6 +6,8 @@ target 'ClimbFriends' do
   use_frameworks!
 
   # Pods for ClimbFriends
+  pod 'Kingfisher', '~> 5.0'
+  pod 'Alamofire', '~> 5.2'
 
   target 'ClimbFriendsTests' do
     inherit! :search_paths
