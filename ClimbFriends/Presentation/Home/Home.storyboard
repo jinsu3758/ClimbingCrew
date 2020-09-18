@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="slt-yB-p66">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,10 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="8jd-UE-Op2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lNC-fl-8qI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G8K-pr-WFH" firstAttribute="trailing" secondItem="lNC-fl-8qI" secondAttribute="trailing" id="aXM-KS-nfH"/>
+                            <constraint firstItem="lNC-fl-8qI" firstAttribute="top" secondItem="G8K-pr-WFH" secondAttribute="top" id="cK1-ld-M1s"/>
+                            <constraint firstAttribute="bottom" secondItem="lNC-fl-8qI" secondAttribute="bottom" id="rPt-6g-a8O"/>
+                            <constraint firstItem="lNC-fl-8qI" firstAttribute="leading" secondItem="G8K-pr-WFH" secondAttribute="leading" id="xug-ya-Ewv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="G8K-pr-WFH"/>
                     </view>
                     <navigationItem key="navigationItem" id="rJS-CB-Vmq"/>
+                    <connections>
+                        <outlet property="gymTableView" destination="lNC-fl-8qI" id="Lnq-AK-DVU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4KU-cu-hko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

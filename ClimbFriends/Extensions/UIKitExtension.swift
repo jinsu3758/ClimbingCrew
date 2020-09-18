@@ -58,3 +58,9 @@ extension NSLayoutConstraint {
     }
 }
 
+extension UITableViewCell {
+    class var name: String {
+        self.description().components(separatedBy: ".").last!
+    }
+}
+

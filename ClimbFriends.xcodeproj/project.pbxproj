@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		05A3DC8C8F8600E4258A1C09 /* Pods_ClimbFriendsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AF44C5EBC22E03773D101B /* Pods_ClimbFriendsTests.framework */; };
 		27E97CD5B1BD28EEC4A41DEE /* Pods_ClimbFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C3901DB0678BB1DDF741E2 /* Pods_ClimbFriends.framework */; };
+		7476523C2513885800A49219 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476523B2513885800A49219 /* UIColorExtension.swift */; };
+		747652452514CD2500A49219 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747652442514CD2500A49219 /* CellType.swift */; };
 		74E28DE8250F7EF300C497ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28DE7250F7EF300C497ED /* AppDelegate.swift */; };
 		74E28DEC250F7EF300C497ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28DEB250F7EF300C497ED /* ViewController.swift */; };
 		74E28DEF250F7EF300C497ED /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E28DED250F7EF300C497ED /* Splash.storyboard */; };
@@ -46,6 +48,8 @@
 		12C3901DB0678BB1DDF741E2 /* Pods_ClimbFriends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClimbFriends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B1C1F39B7CF9113D1E090E /* Pods-ClimbFriendsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimbFriendsTests.release.xcconfig"; path = "Target Support Files/Pods-ClimbFriendsTests/Pods-ClimbFriendsTests.release.xcconfig"; sourceTree = "<group>"; };
 		68DF4B4C10EF106E8E4C1D8D /* Pods-ClimbFriends-ClimbFriendsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimbFriends-ClimbFriendsUITests.release.xcconfig"; path = "Target Support Files/Pods-ClimbFriends-ClimbFriendsUITests/Pods-ClimbFriends-ClimbFriendsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7476523B2513885800A49219 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		747652442514CD2500A49219 /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
 		74E28DE4250F7EF300C497ED /* ClimbFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClimbFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E28DE7250F7EF300C497ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74E28DEB250F7EF300C497ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		747652412514CBF700A49219 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				747652422514CBFE00A49219 /* UI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		747652422514CBFE00A49219 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				747652432514CCC200A49219 /* Enums */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		747652432514CCC200A49219 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				747652442514CD2500A49219 /* CellType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		74E28DDB250F7EF300C497ED = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +152,7 @@
 		74E28DE6250F7EF300C497ED /* ClimbFriends */ = {
 			isa = PBXGroup;
 			children = (
+				747652412514CBF700A49219 /* Common */,
 				74E28E26250F913E00C497ED /* Coordinator */,
 				74E28E23250F90CA00C497ED /* Extensions */,
 				74E28E22250F90BE00C497ED /* Util */,
@@ -202,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				74E28E24250F90EE00C497ED /* UIKitExtension.swift */,
+				7476523B2513885800A49219 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -485,7 +515,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E28E1A250F8D5F00C497ED /* SplashViewController.swift in Sources */,
+				7476523C2513885800A49219 /* UIColorExtension.swift in Sources */,
 				74E28DEC250F7EF300C497ED /* ViewController.swift in Sources */,
+				747652452514CD2500A49219 /* CellType.swift in Sources */,
 				74E28DE8250F7EF300C497ED /* AppDelegate.swift in Sources */,
 				74E28E25250F90EE00C497ED /* UIKitExtension.swift in Sources */,
 				74E28E1D250F8F3600C497ED /* HomeViewController.swift in Sources */,
