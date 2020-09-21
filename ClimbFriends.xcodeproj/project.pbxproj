@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		05A3DC8C8F8600E4258A1C09 /* Pods_ClimbFriendsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AF44C5EBC22E03773D101B /* Pods_ClimbFriendsTests.framework */; };
 		27E97CD5B1BD28EEC4A41DEE /* Pods_ClimbFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C3901DB0678BB1DDF741E2 /* Pods_ClimbFriends.framework */; };
+		7470E0FD251741D3001FCF34 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470E0FC251741D3001FCF34 /* Scene.swift */; };
+		7470E102251748CB001FCF34 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470E101251748CB001FCF34 /* SceneCoordinator.swift */; };
+		7470E10725174A19001FCF34 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470E10625174A19001FCF34 /* HomeViewModel.swift */; };
+		7470E10F25174A5C001FCF34 /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470E10E25174A5C001FCF34 /* ViewModelBindable.swift */; };
+		7470E13A2518D29E001FCF34 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470E1392518D29E001FCF34 /* BaseViewModel.swift */; };
 		7476523C2513885800A49219 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476523B2513885800A49219 /* UIColorExtension.swift */; };
 		747652452514CD2500A49219 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747652442514CD2500A49219 /* CellType.swift */; };
 		74E28DE8250F7EF300C497ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28DE7250F7EF300C497ED /* AppDelegate.swift */; };
@@ -48,6 +53,11 @@
 		12C3901DB0678BB1DDF741E2 /* Pods_ClimbFriends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClimbFriends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B1C1F39B7CF9113D1E090E /* Pods-ClimbFriendsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimbFriendsTests.release.xcconfig"; path = "Target Support Files/Pods-ClimbFriendsTests/Pods-ClimbFriendsTests.release.xcconfig"; sourceTree = "<group>"; };
 		68DF4B4C10EF106E8E4C1D8D /* Pods-ClimbFriends-ClimbFriendsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimbFriends-ClimbFriendsUITests.release.xcconfig"; path = "Target Support Files/Pods-ClimbFriends-ClimbFriendsUITests/Pods-ClimbFriends-ClimbFriendsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7470E0FC251741D3001FCF34 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		7470E101251748CB001FCF34 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		7470E10625174A19001FCF34 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7470E10E25174A5C001FCF34 /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
+		7470E1392518D29E001FCF34 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		7476523B2513885800A49219 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		747652442514CD2500A49219 /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
 		74E28DE4250F7EF300C497ED /* ClimbFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClimbFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				747652432514CCC200A49219 /* Enums */,
+				7470E10E25174A5C001FCF34 /* ViewModelBindable.swift */,
+				7470E1392518D29E001FCF34 /* BaseViewModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -208,6 +220,7 @@
 			children = (
 				74E28E27250F91EA00C497ED /* Gym */,
 				74E28E1C250F8F3600C497ED /* HomeViewController.swift */,
+				7470E10625174A19001FCF34 /* HomeViewModel.swift */,
 				74E28E1E250F8F4000C497ED /* Home.storyboard */,
 			);
 			path = Home;
@@ -239,6 +252,8 @@
 		74E28E26250F913E00C497ED /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				7470E0FC251741D3001FCF34 /* Scene.swift */,
+				7470E101251748CB001FCF34 /* SceneCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -515,13 +530,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E28E1A250F8D5F00C497ED /* SplashViewController.swift in Sources */,
+				7470E10725174A19001FCF34 /* HomeViewModel.swift in Sources */,
 				7476523C2513885800A49219 /* UIColorExtension.swift in Sources */,
+				7470E10F25174A5C001FCF34 /* ViewModelBindable.swift in Sources */,
+				7470E0FD251741D3001FCF34 /* Scene.swift in Sources */,
 				74E28DEC250F7EF300C497ED /* ViewController.swift in Sources */,
 				747652452514CD2500A49219 /* CellType.swift in Sources */,
+				7470E13A2518D29E001FCF34 /* BaseViewModel.swift in Sources */,
 				74E28DE8250F7EF300C497ED /* AppDelegate.swift in Sources */,
 				74E28E25250F90EE00C497ED /* UIKitExtension.swift in Sources */,
 				74E28E1D250F8F3600C497ED /* HomeViewController.swift in Sources */,
 				74E28E2D250F9E8700C497ED /* GymCell.swift in Sources */,
+				7470E102251748CB001FCF34 /* SceneCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

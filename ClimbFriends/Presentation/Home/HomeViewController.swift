@@ -8,8 +8,10 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, ViewModelBindable {
     @IBOutlet weak var gymTableView: UITableView!
+    
+    var viewModel: HomeViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +24,30 @@ class HomeViewController: UIViewController {
         gymTableView.dataSource = self
     }
 
+    func bindViewModel() {
+        
+    }
+
+
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
