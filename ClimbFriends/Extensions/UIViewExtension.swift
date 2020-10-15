@@ -14,6 +14,18 @@ extension UIView {
         get { return layer.cornerRadius }
         set { layer.cornerRadius = newValue }
     }
+    
+    func setDotLine(_ width: CGFloat, color: UIColor = .gray, dotWidth: NSNumber, gapWidth: NSNumber) {
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.strokeColor = color.cgColor
+        shapeLayer.lineWidth = width
+        shapeLayer.lineDashPattern = [dotWidth, gapWidth] // 7 is the length of dash, 3 is length of the gap.
+        
+        let path = CGMutablePath()
+        path.addLines(between: [CGPoint(x: self.bounds.minX, y: self.bounds.minY), CGPoint(x: self.bounds.minX, y: self.bounds.maxY)])
+        shapeLayer.path = path
+        self.layer.addSublayer(shapeLayer)
+    }
 }
 
 extension UIViewController {

@@ -26,8 +26,19 @@
 		74E28E1A250F8D5F00C497ED /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28E19250F8D5F00C497ED /* SplashViewController.swift */; };
 		74E28E1D250F8F3600C497ED /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28E1C250F8F3600C497ED /* HomeViewController.swift */; };
 		74E28E1F250F8F4000C497ED /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E28E1E250F8F4000C497ED /* Home.storyboard */; };
-		74E28E25250F90EE00C497ED /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28E24250F90EE00C497ED /* UIKitExtension.swift */; };
+		74E28E25250F90EE00C497ED /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28E24250F90EE00C497ED /* UIViewExtension.swift */; };
 		74E28E2D250F9E8700C497ED /* GymCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28E2C250F9E8700C497ED /* GymCell.swift */; };
+		74EC9818252AD2F000BBC7A3 /* LevelGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74EC9817252AD2F000BBC7A3 /* LevelGuideView.xib */; };
+		74EC9831252AE11000BBC7A3 /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC9830252AE11000BBC7A3 /* CALayerExtension.swift */; };
+		74EC983E252AE1D200BBC7A3 /* LevelGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC983D252AE1D200BBC7A3 /* LevelGuideView.swift */; };
+		74EC984D252AFCFF00BBC7A3 /* apple-sd-gothic-neo-heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74EC984C252AFCFF00BBC7A3 /* apple-sd-gothic-neo-heavy.otf */; };
+		74EC9859252B049D00BBC7A3 /* AppleSDGothicNeo-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74EC9858252B049D00BBC7A3 /* AppleSDGothicNeo-ExtraBold.otf */; };
+		74EC9862252B0B2D00BBC7A3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC9861252B0B2D00BBC7A3 /* StringExtension.swift */; };
+		74EC9868252B21B200BBC7A3 /* GymRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC9867252B21B200BBC7A3 /* GymRoute.swift */; };
+		74EC9921253192C200BBC7A3 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC9920253192C200BBC7A3 /* IntExtension.swift */; };
+		74EC99272531BA0700BBC7A3 /* RouteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC99262531BA0700BBC7A3 /* RouteListViewController.swift */; };
+		74EC992F2531BA1100BBC7A3 /* RouteList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74EC992E2531BA1100BBC7A3 /* RouteList.storyboard */; };
+		74EC993A2534871D00BBC7A3 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC99392534871D00BBC7A3 /* TriangleView.swift */; };
 		8C8881F23CF30DA3525A50F9 /* Pods_ClimbFriends_ClimbFriendsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11CFEEEE59DC0212A80AEEB3 /* Pods_ClimbFriends_ClimbFriendsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +87,19 @@
 		74E28E19250F8D5F00C497ED /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		74E28E1C250F8F3600C497ED /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		74E28E1E250F8F4000C497ED /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		74E28E24250F90EE00C497ED /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		74E28E24250F90EE00C497ED /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		74E28E2C250F9E8700C497ED /* GymCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymCell.swift; sourceTree = "<group>"; };
+		74EC9817252AD2F000BBC7A3 /* LevelGuideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelGuideView.xib; sourceTree = "<group>"; };
+		74EC9830252AE11000BBC7A3 /* CALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
+		74EC983D252AE1D200BBC7A3 /* LevelGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelGuideView.swift; sourceTree = "<group>"; };
+		74EC984C252AFCFF00BBC7A3 /* apple-sd-gothic-neo-heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "apple-sd-gothic-neo-heavy.otf"; sourceTree = "<group>"; };
+		74EC9858252B049D00BBC7A3 /* AppleSDGothicNeo-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AppleSDGothicNeo-ExtraBold.otf"; sourceTree = "<group>"; };
+		74EC9861252B0B2D00BBC7A3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		74EC9867252B21B200BBC7A3 /* GymRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymRoute.swift; sourceTree = "<group>"; };
+		74EC9920253192C200BBC7A3 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		74EC99262531BA0700BBC7A3 /* RouteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListViewController.swift; sourceTree = "<group>"; };
+		74EC992E2531BA1100BBC7A3 /* RouteList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RouteList.storyboard; sourceTree = "<group>"; };
+		74EC99392534871D00BBC7A3 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		7877207B78BEDA6E955A6317 /* Pods-ClimbFriends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimbFriends.release.xcconfig"; path = "Target Support Files/Pods-ClimbFriends/Pods-ClimbFriends.release.xcconfig"; sourceTree = "<group>"; };
 		86AF44C5EBC22E03773D101B /* Pods_ClimbFriendsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClimbFriendsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F48F035C181DF84D4DF2A6 /* Pods-ClimbFriends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimbFriends.debug.xcconfig"; path = "Target Support Files/Pods-ClimbFriends/Pods-ClimbFriends.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +149,7 @@
 				747652432514CCC200A49219 /* Enums */,
 				7470E10E25174A5C001FCF34 /* ViewModelBindable.swift */,
 				7470E1392518D29E001FCF34 /* BaseViewModel.swift */,
+				74EC99392534871D00BBC7A3 /* TriangleView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -164,6 +187,7 @@
 		74E28DE6250F7EF300C497ED /* ClimbFriends */ = {
 			isa = PBXGroup;
 			children = (
+				74EC9842252AFBF100BBC7A3 /* Resources */,
 				747652412514CBF700A49219 /* Common */,
 				74E28E26250F913E00C497ED /* Coordinator */,
 				74E28E23250F90CA00C497ED /* Extensions */,
@@ -172,7 +196,6 @@
 				74E28E17250F7FAA00C497ED /* Presentation */,
 				74E28DE7250F7EF300C497ED /* AppDelegate.swift */,
 				74E28DEB250F7EF300C497ED /* ViewController.swift */,
-				74E28DF0250F7EF400C497ED /* Assets.xcassets */,
 				74E28DF2250F7EF400C497ED /* LaunchScreen.storyboard */,
 				74E28DF5250F7EF400C497ED /* Info.plist */,
 			);
@@ -200,8 +223,11 @@
 		74E28E17250F7FAA00C497ED /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				74EC99252531B85600BBC7A3 /* RouteList */,
 				74E28E1B250F8F2D00C497ED /* Home */,
 				74E28E18250F7FB500C497ED /* Splash */,
+				74EC9817252AD2F000BBC7A3 /* LevelGuideView.xib */,
+				74EC983D252AE1D200BBC7A3 /* LevelGuideView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -229,6 +255,7 @@
 		74E28E21250F90B900C497ED /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				74EC9866252B206800BBC7A3 /* Model */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -243,8 +270,11 @@
 		74E28E23250F90CA00C497ED /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				74E28E24250F90EE00C497ED /* UIKitExtension.swift */,
+				74E28E24250F90EE00C497ED /* UIViewExtension.swift */,
 				7476523B2513885800A49219 /* UIColorExtension.swift */,
+				74EC9830252AE11000BBC7A3 /* CALayerExtension.swift */,
+				74EC9861252B0B2D00BBC7A3 /* StringExtension.swift */,
+				74EC9920253192C200BBC7A3 /* IntExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +294,41 @@
 				74E28E2C250F9E8700C497ED /* GymCell.swift */,
 			);
 			path = Gym;
+			sourceTree = "<group>";
+		};
+		74EC9842252AFBF100BBC7A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				74EC9851252AFD7000BBC7A3 /* Fonts */,
+				74E28DF0250F7EF400C497ED /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		74EC9851252AFD7000BBC7A3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				74EC9858252B049D00BBC7A3 /* AppleSDGothicNeo-ExtraBold.otf */,
+				74EC984C252AFCFF00BBC7A3 /* apple-sd-gothic-neo-heavy.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		74EC9866252B206800BBC7A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74EC9867252B21B200BBC7A3 /* GymRoute.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74EC99252531B85600BBC7A3 /* RouteList */ = {
+			isa = PBXGroup;
+			children = (
+				74EC99262531BA0700BBC7A3 /* RouteListViewController.swift */,
+				74EC992E2531BA1100BBC7A3 /* RouteList.storyboard */,
+			);
+			path = RouteList;
 			sourceTree = "<group>";
 		};
 		7DDD91079D22ACCB8FA327C5 /* Pods */ = {
@@ -398,9 +463,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74EC984D252AFCFF00BBC7A3 /* apple-sd-gothic-neo-heavy.otf in Resources */,
 				74E28DF4250F7EF400C497ED /* LaunchScreen.storyboard in Resources */,
+				74EC9859252B049D00BBC7A3 /* AppleSDGothicNeo-ExtraBold.otf in Resources */,
 				74E28DF1250F7EF400C497ED /* Assets.xcassets in Resources */,
+				74EC9818252AD2F000BBC7A3 /* LevelGuideView.xib in Resources */,
 				74E28DEF250F7EF300C497ED /* Splash.storyboard in Resources */,
+				74EC992F2531BA1100BBC7A3 /* RouteList.storyboard in Resources */,
 				74E28E1F250F8F4000C497ED /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,15 +599,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E28E1A250F8D5F00C497ED /* SplashViewController.swift in Sources */,
+				74EC983E252AE1D200BBC7A3 /* LevelGuideView.swift in Sources */,
 				7470E10725174A19001FCF34 /* HomeViewModel.swift in Sources */,
 				7476523C2513885800A49219 /* UIColorExtension.swift in Sources */,
+				74EC9862252B0B2D00BBC7A3 /* StringExtension.swift in Sources */,
+				74EC9921253192C200BBC7A3 /* IntExtension.swift in Sources */,
 				7470E10F25174A5C001FCF34 /* ViewModelBindable.swift in Sources */,
 				7470E0FD251741D3001FCF34 /* Scene.swift in Sources */,
+				74EC9831252AE11000BBC7A3 /* CALayerExtension.swift in Sources */,
 				74E28DEC250F7EF300C497ED /* ViewController.swift in Sources */,
+				74EC993A2534871D00BBC7A3 /* TriangleView.swift in Sources */,
 				747652452514CD2500A49219 /* CellType.swift in Sources */,
 				7470E13A2518D29E001FCF34 /* BaseViewModel.swift in Sources */,
 				74E28DE8250F7EF300C497ED /* AppDelegate.swift in Sources */,
-				74E28E25250F90EE00C497ED /* UIKitExtension.swift in Sources */,
+				74E28E25250F90EE00C497ED /* UIViewExtension.swift in Sources */,
+				74EC99272531BA0700BBC7A3 /* RouteListViewController.swift in Sources */,
+				74EC9868252B21B200BBC7A3 /* GymRoute.swift in Sources */,
 				74E28E1D250F8F3600C497ED /* HomeViewController.swift in Sources */,
 				74E28E2D250F9E8700C497ED /* GymCell.swift in Sources */,
 				7470E102251748CB001FCF34 /* SceneCoordinator.swift in Sources */,

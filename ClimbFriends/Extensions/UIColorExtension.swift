@@ -30,4 +30,20 @@ extension UIColor {
     class var textBlack: UIColor {
         UIColor(red: 51, green: 51, blue: 51)
     }
+    
+    class var pinkishGrey84: UIColor {
+        UIColor(red: 209, green: 209, blue: 209, a: 0.84)
+    }
+    
+    @nonobjc class var black40: UIColor {
+        return UIColor(white: 0.0, alpha: 0.4)
+    }
+    
+    @nonobjc class var warmGreyTwo: UIColor {
+        return UIColor(white: 112.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var whiteThree: UIColor {
+        return UIColor(white: 224.0 / 255.0, alpha: 1.0)
+    }
 }
