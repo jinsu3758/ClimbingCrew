@@ -44,7 +44,15 @@ class SceneCoordinator: CoordinatorType {
     }
     
     func close(to scene: Scene?, animated: Bool, completion: (() -> Void)?) {
-        
+        if let presentingViewController = currentViewController.presentingViewController {
+            currentViewController.dismiss(animated: animated, completion: completion)
+            currentViewController = presentingViewController
+        }
+        else {
+            navigationController.popViewController(animated: animated)
+            currentViewController = navigationController.viewControllers.last!
+            completion?()
+        }
     }
     
     

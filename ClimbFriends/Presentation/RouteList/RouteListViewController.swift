@@ -29,22 +29,22 @@ class RouteListViewController: UIViewController {
         
         test.translatesAutoresizingMaskIntoConstraints = false
         test.backgroundColor = .clear
-//        self.view.addSubview(test)
-//
-//        test.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 80).isActive = true
-//        test.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-//        test.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-//        self.view.layoutIfNeeded()
-//        test.routes = routes
+        self.view.addSubview(test)
 
-        let triangle = TriangleView(direction: .down, color: .whiteThree)
-        triangle.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(triangle)
-        
-        triangle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        triangle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        triangle.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        triangle.heightAnchor.constraint(equalToConstant: 10).isActive = true
+        test.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 80).isActive = true
+        test.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        test.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        self.view.layoutIfNeeded()
+        test.routes = routes
+
+//        let triangle = TriangleView(direction: .down, color: .whiteThree)
+//        triangle.translatesAutoresizingMaskIntoConstraints = false
+//        self.view.addSubview(triangle)
+//
+//        triangle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        triangle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+//        triangle.widthAnchor.constraint(equalToConstant: 20).isActive = true
+//        triangle.heightAnchor.constraint(equalToConstant: 10).isActive = true
         
         
         

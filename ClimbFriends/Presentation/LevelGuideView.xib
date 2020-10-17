@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,6 +24,8 @@
                 <outlet property="highestLevelLabel" destination="R3Z-C2-Sl8" id="FIS-do-6iI"/>
                 <outlet property="levelColorStackView" destination="Iup-8S-5PU" id="wRp-1a-SFf"/>
                 <outlet property="lowestLevelLabel" destination="B9J-Ie-tkF" id="W2C-FH-qLH"/>
+                <outlet property="routeContentView" destination="b09-U0-z1i" id="imR-O4-Hva"/>
+                <outlet property="routeContentViewHeightConstraint" destination="bXZ-5i-6Pv" id="S3F-pW-z1S"/>
                 <outlet property="videoNumLabel" destination="4z5-rv-dt5" id="IEf-dW-lrd"/>
             </connections>
         </placeholder>
@@ -42,36 +44,50 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영상 8개" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z5-rv-dt5">
-                            <rect key="frame" x="367" y="19.5" width="31" height="11"/>
+                            <rect key="frame" x="367" y="19.5" width="31" height="12"/>
                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Heavy" family="Apple SD Gothic Neo" pointSize="9"/>
                             <color key="textColor" name="warmGrey"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3Z-C2-Sl8">
-                            <rect key="frame" x="379.5" y="36.5" width="16.5" height="11"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Lv.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3Z-C2-Sl8">
+                            <rect key="frame" x="379.5" y="37.5" width="16.5" height="11"/>
                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-ExtraBold" family="Apple SD Gothic Neo" pointSize="9"/>
                             <color key="textColor" name="warmGrey"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ft6-rK-2pD">
-                            <rect key="frame" x="12" y="63.5" width="390" height="0.5"/>
+                            <rect key="frame" x="12" y="64.5" width="390" height="0.5"/>
                             <color key="backgroundColor" name="warmGreyTwo"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="Z9O-an-MnE"/>
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Iup-8S-5PU">
-                            <rect key="frame" x="32" y="56" width="350" height="16"/>
+                            <rect key="frame" x="32" y="56.5" width="350" height="16"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="16" id="yuD-GD-yUI"/>
                             </constraints>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv.1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9J-Ie-tkF">
-                            <rect key="frame" x="16" y="36.5" width="16.5" height="11"/>
+                            <rect key="frame" x="16" y="37.5" width="16.5" height="11"/>
                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-ExtraBold" family="Apple SD Gothic Neo" pointSize="9"/>
                             <color key="textColor" name="warmGrey"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="185-CY-5vZ">
+                            <rect key="frame" x="12" y="0.0" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="testButton:" destination="-1" eventType="touchUpInside" id="9eJ-1N-v8e"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b09-U0-z1i">
+                            <rect key="frame" x="0.0" y="72.5" width="414" height="142.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="142.5" id="bXZ-5i-6Pv"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" name="whiteTwo"/>
                     <constraints>
@@ -82,17 +98,22 @@
                         <constraint firstAttribute="trailing" secondItem="R3Z-C2-Sl8" secondAttribute="trailing" constant="18" id="K89-3k-fyf"/>
                         <constraint firstItem="B9J-Ie-tkF" firstAttribute="leading" secondItem="H2N-hP-nly" secondAttribute="leading" constant="16" id="P7I-T3-4Lp"/>
                         <constraint firstAttribute="trailing" secondItem="Ft6-rK-2pD" secondAttribute="trailing" constant="12" id="Vbm-Un-udY"/>
+                        <constraint firstItem="b09-U0-z1i" firstAttribute="top" secondItem="Iup-8S-5PU" secondAttribute="bottom" id="Zkz-pX-UQ3"/>
+                        <constraint firstAttribute="bottom" secondItem="b09-U0-z1i" secondAttribute="bottom" id="aec-eM-3Jb"/>
+                        <constraint firstAttribute="trailing" secondItem="b09-U0-z1i" secondAttribute="trailing" id="bEu-0Y-2ly"/>
                         <constraint firstAttribute="trailing" secondItem="Iup-8S-5PU" secondAttribute="trailing" constant="32" id="e80-bF-Fy3"/>
                         <constraint firstItem="Iup-8S-5PU" firstAttribute="leading" secondItem="H2N-hP-nly" secondAttribute="leading" constant="32" id="g9K-M8-DlI"/>
                         <constraint firstItem="Iup-8S-5PU" firstAttribute="centerY" secondItem="Ft6-rK-2pD" secondAttribute="centerY" id="gLS-vA-QDG"/>
                         <constraint firstItem="Ft6-rK-2pD" firstAttribute="top" secondItem="R3Z-C2-Sl8" secondAttribute="bottom" constant="16" id="kkE-H2-Hlg"/>
+                        <constraint firstItem="b09-U0-z1i" firstAttribute="leading" secondItem="H2N-hP-nly" secondAttribute="leading" id="oFV-Kx-IPy"/>
+                        <constraint firstItem="185-CY-5vZ" firstAttribute="leading" secondItem="H2N-hP-nly" secondAttribute="leading" constant="12" id="p2Y-r0-owz"/>
                         <constraint firstItem="T12-Dl-AIC" firstAttribute="top" secondItem="H2N-hP-nly" secondAttribute="top" constant="17" id="peL-qr-jwT"/>
                         <constraint firstItem="T12-Dl-AIC" firstAttribute="centerX" secondItem="H2N-hP-nly" secondAttribute="centerX" id="qza-G1-QE0"/>
                         <constraint firstItem="B9J-Ie-tkF" firstAttribute="centerY" secondItem="R3Z-C2-Sl8" secondAttribute="centerY" id="u4E-xF-Jqv"/>
+                        <constraint firstItem="185-CY-5vZ" firstAttribute="top" secondItem="H2N-hP-nly" secondAttribute="top" id="xkl-DB-e1R"/>
                     </constraints>
                 </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="H2N-hP-nly" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eTV-Bw-G5j"/>
@@ -101,6 +122,7 @@
                 <constraint firstItem="H2N-hP-nly" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yzM-PQ-8PE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                     <real key="value" value="0.0"/>
