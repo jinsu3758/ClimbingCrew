@@ -18,13 +18,35 @@ class LevelGuideView: UIView {
     @IBOutlet weak var routeContentView: UIView!
     @IBOutlet weak var routeContentViewHeightConstraint: NSLayoutConstraint!
     
+    var isFoldabled: Bool = false {
+        didSet {
+            dotLines.forEach { line in
+                line.removeLine(height: routeViewHeight)
+            }
+            if isFoldabled {
+                self.routeContentViewHeightConstraint.constant = 21
+            }
+            else {
+                self.routeContentViewHeightConstraint.constant = routeViewHeight
+            }
+            UIView.animate(withDuration: 0.3, animations: { [unowned self] in
+                self.routeStackViews.forEach { view in
+                    view.alpha = self.isFoldabled ? 0 : 1
+                }
+                self.layoutIfNeeded()
+            })
+        }
+    }
+    
     var routes: [GymRoute] = [] {
         didSet {
             setRoute()
         }
     }
     
-    private var dotLines: [DotLineView] = []
+    private var dotLines: [UIView] = []
+    private var routeStackViews: [UIStackView] = []
+    private var routeViewHeight: CGFloat = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,6 +70,8 @@ class LevelGuideView: UIView {
         let stackViewSpacing = floor((stackViewWidth - CGFloat(routes.count * 16)) / CGFloat(routes.count - 1))
         levelColorStackView.spacing = stackViewSpacing
         
+        var tempCount: Int = 0
+        
         routes.forEach { route in
             let levelView = UIView()
             levelView.translatesAutoresizingMaskIntoConstraints = false
@@ -61,7 +85,7 @@ class LevelGuideView: UIView {
             levelView.heightAnchor.constraint(equalToConstant: 16).isActive = true
             
 //            let routeDotLine = UIView()
-            let routeDotLine = DotLineView()
+            let routeDotLine = UIView()
             routeDotLine.translatesAutoresizingMaskIntoConstraints = false
             routeContentView.addSubview(routeDotLine)
 //            self.addSubview(routeDodLine)
@@ -78,9 +102,15 @@ class LevelGuideView: UIView {
             routeStackView.alignment = .fill
             routeStackView.distribution = .fillEqually
             routeStackView.spacing = 8
+            routeStackViews.append(routeStackView)
 
 //            self.addSubview(routeStackView)
             routeContentView.addSubview(routeStackView)
+            
+            if route.routeColors.count > tempCount {
+                tempCount = route.routeColors.count
+                routeViewHeight = CGFloat(tempCount * 9 + (tempCount - 1) * 8 + 24 + 12)
+            }
 
             route.routeColors.forEach { color in
                 let colorView = UIView()
@@ -95,7 +125,7 @@ class LevelGuideView: UIView {
             
             routeStackView.widthAnchor.constraint(equalToConstant: 16).isActive = true
             routeStackView.topAnchor.constraint(equalTo: routeContentView.topAnchor, constant: 12).isActive = true
-            routeStackView.bottomAnchor.constraint(lessThanOrEqualTo: routeContentView.bottomAnchor, constant: 24).isActive = true
+//            routeStackView.bottomAnchor.constraint(lessThanOrEqualTo: routeContentView.bottomAnchor, constant: 24).isActive = true
 //            routeStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -24).isActive = true
             routeStackView.centerXAnchor.constraint(equalTo: levelView.centerXAnchor).isActive = true
             
@@ -107,41 +137,15 @@ class LevelGuideView: UIView {
     }
     
     private func updateDotLine() {
+        routeContentViewHeightConstraint.constant = routeViewHeight
         self.layoutIfNeeded()
-        routeContentViewHeightConstraint.constant = dotLines.first!.frame.height
         dotLines.forEach { line in
-            line.updateDotLine(0.3, color: .black40, dotWidth: 1, gapWidth: 0.5)
-//            line.setDotLine(0.3, color: .black40, dotWidth: 1, gapWidth: 0.5)
+            line.setDotLine(0.3, color: .black40, dotWidth: 1, gapWidth: 0.5)
         }
     }
     
     @IBAction func testButton(_ sender: Any) {
-        self.routeContentViewHeightConstraint.constant = 21
-        UIView.animate(withDuration: 0.3, animations: {
-            self.layoutIfNeeded()
-        })
-    }
-    
-}
-
-class DotLineView: UIView {
-    let shapeLayer = CAShapeLayer()
-    
-    func updateDotLine(_ width: CGFloat, color: UIColor = .gray, dotWidth: NSNumber, gapWidth: NSNumber) {
-        shapeLayer.strokeColor = color.cgColor
-        shapeLayer.lineWidth = width
-        shapeLayer.lineDashPattern = [dotWidth, gapWidth] // 7 is the length of dash, 3 is length of the gap.
-        
-        let path = CGMutablePath()
-        path.addLines(between: [CGPoint(x: self.bounds.minX, y: self.bounds.minY), CGPoint(x: self.bounds.minX, y: self.bounds.maxY)])
-        shapeLayer.path = path
-        self.layer.addSublayer(shapeLayer)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.layer.frame = self.bounds
-//        shapeLayer.frame = self.bounds
+        isFoldabled = !isFoldabled
     }
     
 }

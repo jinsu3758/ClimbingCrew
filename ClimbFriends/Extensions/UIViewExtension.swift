@@ -20,11 +20,23 @@ extension UIView {
         shapeLayer.strokeColor = color.cgColor
         shapeLayer.lineWidth = width
         shapeLayer.lineDashPattern = [dotWidth, gapWidth] // 7 is the length of dash, 3 is length of the gap.
+        shapeLayer.name = "dotLine"
         
         let path = CGMutablePath()
         path.addLines(between: [CGPoint(x: self.bounds.minX, y: self.bounds.minY), CGPoint(x: self.bounds.minX, y: self.bounds.maxY)])
         shapeLayer.path = path
         self.layer.addSublayer(shapeLayer)
+    }
+    
+    func updateDotLine(height: CGFloat) {
+        print("\(height)!!")
+        self.layer.sublayers?.forEach {
+            if $0.name == "dotLine" {
+                let sy = 21 / height
+                print("\(sy)!!")
+                $0.transform = CATransform3DMakeScale(1.0, sy, 1.0)
+            }
+        }
     }
 }
 

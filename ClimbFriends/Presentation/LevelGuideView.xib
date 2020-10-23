@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,17 +25,17 @@
                 <outlet property="levelColorStackView" destination="Iup-8S-5PU" id="wRp-1a-SFf"/>
                 <outlet property="lowestLevelLabel" destination="B9J-Ie-tkF" id="W2C-FH-qLH"/>
                 <outlet property="routeContentView" destination="b09-U0-z1i" id="imR-O4-Hva"/>
-                <outlet property="routeContentViewHeightConstraint" destination="bXZ-5i-6Pv" id="S3F-pW-z1S"/>
+                <outlet property="routeContentViewHeightConstraint" destination="yKi-bS-SMg" id="LYR-aG-Rhs"/>
                 <outlet property="videoNumLabel" destination="4z5-rv-dt5" id="IEf-dW-lrd"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="215"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="354"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2N-hP-nly">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="215"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="354"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 볼더스" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T12-Dl-AIC">
                             <rect key="frame" x="179" y="17" width="56" height="15"/>
@@ -74,7 +74,7 @@
                             <color key="textColor" name="warmGrey"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="185-CY-5vZ">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="185-CY-5vZ">
                             <rect key="frame" x="12" y="0.0" width="46" height="30"/>
                             <state key="normal" title="Button"/>
                             <connections>
@@ -82,10 +82,10 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b09-U0-z1i">
-                            <rect key="frame" x="0.0" y="72.5" width="414" height="142.5"/>
+                            <rect key="frame" x="0.0" y="72.5" width="414" height="281.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="142.5" id="bXZ-5i-6Pv"/>
+                                <constraint firstAttribute="height" constant="281.5" id="yKi-bS-SMg"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -114,6 +114,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="H2N-hP-nly" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eTV-Bw-G5j"/>
@@ -122,13 +123,12 @@
                 <constraint firstItem="H2N-hP-nly" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yzM-PQ-8PE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                     <real key="value" value="0.0"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="137.68115942028987" y="380.69196428571428"/>
+            <point key="canvasLocation" x="137.68115942028987" y="427.23214285714283"/>
         </view>
     </objects>
     <resources>
