@@ -162,6 +162,15 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		74B582932542B788007CC6D9 /* LevelGuideView */ = {
+			isa = PBXGroup;
+			children = (
+				74EC9817252AD2F000BBC7A3 /* LevelGuideView.xib */,
+				74EC983D252AE1D200BBC7A3 /* LevelGuideView.swift */,
+			);
+			path = LevelGuideView;
+			sourceTree = "<group>";
+		};
 		74E28DDB250F7EF300C497ED = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +200,6 @@
 				747652412514CBF700A49219 /* Common */,
 				74E28E26250F913E00C497ED /* Coordinator */,
 				74E28E23250F90CA00C497ED /* Extensions */,
-				74E28E22250F90BE00C497ED /* Util */,
 				74E28E21250F90B900C497ED /* Data */,
 				74E28E17250F7FAA00C497ED /* Presentation */,
 				74E28DE7250F7EF300C497ED /* AppDelegate.swift */,
@@ -226,8 +234,6 @@
 				74EC99252531B85600BBC7A3 /* RouteList */,
 				74E28E1B250F8F2D00C497ED /* Home */,
 				74E28E18250F7FB500C497ED /* Splash */,
-				74EC9817252AD2F000BBC7A3 /* LevelGuideView.xib */,
-				74EC983D252AE1D200BBC7A3 /* LevelGuideView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -258,13 +264,6 @@
 				74EC9866252B206800BBC7A3 /* Model */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		74E28E22250F90BE00C497ED /* Util */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Util;
 			sourceTree = "<group>";
 		};
 		74E28E23250F90CA00C497ED /* Extensions */ = {
@@ -325,6 +324,7 @@
 		74EC99252531B85600BBC7A3 /* RouteList */ = {
 			isa = PBXGroup;
 			children = (
+				74B582932542B788007CC6D9 /* LevelGuideView */,
 				74EC99262531BA0700BBC7A3 /* RouteListViewController.swift */,
 				74EC992E2531BA1100BBC7A3 /* RouteList.storyboard */,
 			);

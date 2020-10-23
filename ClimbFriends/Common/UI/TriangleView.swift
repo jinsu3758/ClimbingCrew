@@ -16,18 +16,39 @@ enum TriangleDirection {
 }
 
 @IBDesignable
-class TriangleView: UIView {
-    private var color: UIColor = .gray
-    private var direction: TriangleDirection = .down
+class TriangleView: UIButton {
+    @IBInspectable private var color: UIColor = .gray
+    var direction: TriangleDirection = .up
     
-    convenience init(direction: TriangleDirection, color: UIColor = .gray) {
-        self.init()
-        self.direction = direction
-        self.color = color
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        initView()
     }
     
-    override func draw(_ rect: CGRect) {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initView()
+    }
+    
+    convenience init(_ frame: CGRect = CGRect.zero, direction: TriangleDirection, color: UIColor = .gray) {
+        self.init(frame: frame)
+        self.direction = direction
+        self.color = color
+        initView()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        initView()
+    }
+    
+    fileprivate func initView() {
         self.backgroundColor = .clear
+    }
+    
+    
+    override func draw(_ rect: CGRect) {
+        
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
         context.beginPath()
@@ -55,5 +76,8 @@ class TriangleView: UIView {
         context.setFillColor(color.cgColor)
         context.fillPath()
     }
+    
+    
+  
 
 }

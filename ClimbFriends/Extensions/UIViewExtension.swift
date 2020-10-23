@@ -28,13 +28,23 @@ extension UIView {
         self.layer.addSublayer(shapeLayer)
     }
     
-    func updateDotLine(height: CGFloat) {
-        print("\(height)!!")
+    func updateDotLine(_ height: CGFloat?) {
         self.layer.sublayers?.forEach {
             if $0.name == "dotLine" {
-                let sy = 21 / height
-                print("\(sy)!!")
+                guard let height = height else {
+                    $0.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
+                    return
+                }
+                let sy = height / self.frame.height
                 $0.transform = CATransform3DMakeScale(1.0, sy, 1.0)
+            }
+        }
+    }
+    
+    func update() {
+        self.layer.sublayers?.forEach {
+            if $0.name == "dotLine" {
+                $0.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
             }
         }
     }

@@ -17,19 +17,27 @@ class LevelGuideView: UIView {
     @IBOutlet weak var levelColorStackView: UIStackView!
     @IBOutlet weak var routeContentView: UIView!
     @IBOutlet weak var routeContentViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var foldButton: TriangleView!
+    @IBOutlet weak var unfoldButton: TriangleView!
     
-    var isFoldabled: Bool = false {
+    var isFoldabled: Bool = true {
         didSet {
-            dotLines.forEach { line in
-                line.removeLine(height: routeViewHeight)
-            }
+            
             if isFoldabled {
+                dotLines.forEach { line in
+                    line.updateDotLine(21)
+                }
                 self.routeContentViewHeightConstraint.constant = 21
             }
             else {
+                dotLines.forEach { line in
+                    line.update()
+                }
                 self.routeContentViewHeightConstraint.constant = routeViewHeight
             }
             UIView.animate(withDuration: 0.3, animations: { [unowned self] in
+//                self.unfoldButton.isHidden = !self.isFoldabled
+//                self.foldButton.isHidden = self.isFoldabled
                 self.routeStackViews.forEach { view in
                     view.alpha = self.isFoldabled ? 0 : 1
                 }
@@ -50,16 +58,22 @@ class LevelGuideView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         let view = Bundle.main.loadNibNamed("LevelGuideView", owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
         self.addSubview(view)
-
+        
+        unfoldButton.direction = .down
+        
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 36
         contentView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         contentView.layer.setShadow(color: .pinkishGrey84, alpha: 1, x: 0, y: 0.5, blur: 2, spread: 0)
     }
     
+    @objc func testB(_ sender: UIButton) {
+        isFoldabled = !isFoldabled
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -142,10 +156,16 @@ class LevelGuideView: UIView {
         dotLines.forEach { line in
             line.setDotLine(0.3, color: .black40, dotWidth: 1, gapWidth: 0.5)
         }
+        isFoldabled = true
     }
     
     @IBAction func testButton(_ sender: Any) {
         isFoldabled = !isFoldabled
     }
+    
+    @IBAction func showHideRouteList(_ sender: Any) {
+        isFoldabled = !isFoldabled
+    }
+    
     
 }
