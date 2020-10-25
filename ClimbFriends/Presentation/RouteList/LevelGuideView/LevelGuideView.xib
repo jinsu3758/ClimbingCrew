@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -20,14 +21,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LevelGuideView" customModule="ClimbFriends" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="H2N-hP-nly" id="GA9-Do-MBt"/>
-                <outlet property="foldButton" destination="aEB-TI-R3y" id="jYb-sr-xMh"/>
+                <outlet property="foldButton" destination="SLK-6L-sFO" id="foa-NV-LDd"/>
                 <outlet property="gymTitleLabel" destination="T12-Dl-AIC" id="DBf-2l-t0y"/>
                 <outlet property="highestLevelLabel" destination="R3Z-C2-Sl8" id="FIS-do-6iI"/>
                 <outlet property="levelColorStackView" destination="Iup-8S-5PU" id="wRp-1a-SFf"/>
                 <outlet property="lowestLevelLabel" destination="B9J-Ie-tkF" id="W2C-FH-qLH"/>
                 <outlet property="routeContentView" destination="b09-U0-z1i" id="imR-O4-Hva"/>
                 <outlet property="routeContentViewHeightConstraint" destination="yKi-bS-SMg" id="LYR-aG-Rhs"/>
-                <outlet property="unfoldButton" destination="bWz-FD-xE4" id="Qk8-Pl-d8K"/>
+                <outlet property="unfoldButton" destination="CRY-q2-jM3" id="DUM-86-dgI"/>
                 <outlet property="videoNumLabel" destination="4z5-rv-dt5" id="IEf-dW-lrd"/>
             </connections>
         </placeholder>
@@ -39,6 +40,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2N-hP-nly">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="354"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRY-q2-jM3" customClass="TriangleView" customModule="ClimbFriends" customModuleProvider="target">
+                            <rect key="frame" x="197" y="354" width="20" height="8"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="7Ve-wA-69f"/>
+                                <constraint firstAttribute="height" constant="8" id="ewo-ji-dZs"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                    <color key="value" name="whiteThree"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 볼더스" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T12-Dl-AIC">
                             <rect key="frame" x="179" y="17" width="56" height="15"/>
                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="12"/>
@@ -46,13 +60,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영상 8개" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z5-rv-dt5">
-                            <rect key="frame" x="367" y="20" width="31" height="11.5"/>
+                            <rect key="frame" x="367" y="19.5" width="31" height="12"/>
                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Heavy" family="Apple SD Gothic Neo" pointSize="9"/>
                             <color key="textColor" name="warmGrey"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Lv.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3Z-C2-Sl8">
-                            <rect key="frame" x="377.5" y="37.5" width="18.5" height="11"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Lv.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3Z-C2-Sl8">
+                            <rect key="frame" x="379.5" y="37.5" width="16.5" height="11"/>
                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-ExtraBold" family="Apple SD Gothic Neo" pointSize="9"/>
                             <color key="textColor" name="warmGrey"/>
                             <nil key="highlightedColor"/>
@@ -71,70 +85,60 @@
                             </constraints>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv.1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9J-Ie-tkF">
-                            <rect key="frame" x="16" y="37.5" width="18.5" height="11"/>
+                            <rect key="frame" x="16" y="37.5" width="16.5" height="11"/>
                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-ExtraBold" family="Apple SD Gothic Neo" pointSize="9"/>
                             <color key="textColor" name="warmGrey"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="185-CY-5vZ">
-                            <rect key="frame" x="12" y="0.0" width="46" height="30"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="testButton:" destination="-1" eventType="touchUpInside" id="9eJ-1N-v8e"/>
-                            </connections>
-                        </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b09-U0-z1i">
                             <rect key="frame" x="0.0" y="72.5" width="414" height="281.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEB-TI-R3y" customClass="TriangleView" customModule="ClimbFriends" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLK-6L-sFO" customClass="TriangleView" customModule="ClimbFriends" customModuleProvider="target">
                                     <rect key="frame" x="197" y="273.5" width="20" height="8"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="20" id="fc7-nC-QsD"/>
-                                        <constraint firstAttribute="height" constant="8" id="sge-UR-gy8"/>
+                                        <constraint firstAttribute="height" constant="8" id="MPK-3u-8Dr"/>
+                                        <constraint firstAttribute="width" constant="20" id="cQK-qB-Yyn"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="color">
                                             <color key="value" name="whiteThree"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kat-OI-Xgz">
+                                    <rect key="frame" x="0.0" y="261.5" width="414" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="HIE-aH-9cR"/>
+                                    </constraints>
                                     <connections>
-                                        <action selector="showHideRouteList:" destination="-1" eventType="touchUpInside" id="2id-Xy-49H"/>
+                                        <action selector="showHideRouteList:" destination="-1" eventType="touchUpInside" id="D9Q-2s-1mc"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="aEB-TI-R3y" secondAttribute="bottom" id="3z4-YI-asb"/>
-                                <constraint firstItem="aEB-TI-R3y" firstAttribute="centerX" secondItem="b09-U0-z1i" secondAttribute="centerX" id="srT-C3-rkN"/>
+                                <constraint firstItem="Kat-OI-Xgz" firstAttribute="leading" secondItem="b09-U0-z1i" secondAttribute="leading" id="0FE-ed-EK9"/>
+                                <constraint firstAttribute="trailing" secondItem="Kat-OI-Xgz" secondAttribute="trailing" id="3Si-XZ-dxn"/>
+                                <constraint firstAttribute="bottom" secondItem="SLK-6L-sFO" secondAttribute="bottom" id="8Fx-cZ-CKV"/>
+                                <constraint firstItem="SLK-6L-sFO" firstAttribute="centerX" secondItem="b09-U0-z1i" secondAttribute="centerX" id="8V8-ah-vkP"/>
                                 <constraint firstAttribute="height" constant="281.5" id="yKi-bS-SMg"/>
+                                <constraint firstAttribute="bottom" secondItem="Kat-OI-Xgz" secondAttribute="bottom" id="yXx-EQ-aeb"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWz-FD-xE4" customClass="TriangleView" customModule="ClimbFriends" customModuleProvider="target">
-                            <rect key="frame" x="197" y="354" width="20" height="8"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="8" id="LQR-Ca-RmF"/>
-                                <constraint firstAttribute="width" constant="20" id="nWy-1I-aPN"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                    <color key="value" name="whiteThree"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="showHideRouteList:" destination="-1" eventType="touchUpInside" id="DeK-n1-gGX"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" name="whiteTwo"/>
                     <constraints>
+                        <constraint firstItem="CRY-q2-jM3" firstAttribute="centerX" secondItem="H2N-hP-nly" secondAttribute="centerX" id="5Hd-vh-po0"/>
                         <constraint firstItem="R3Z-C2-Sl8" firstAttribute="top" secondItem="4z5-rv-dt5" secondAttribute="bottom" constant="6" id="6Fc-hc-aWc"/>
-                        <constraint firstAttribute="bottom" secondItem="bWz-FD-xE4" secondAttribute="top" id="8xW-Z3-Hii"/>
                         <constraint firstItem="Ft6-rK-2pD" firstAttribute="leading" secondItem="H2N-hP-nly" secondAttribute="leading" constant="12" id="96X-n2-Wad"/>
                         <constraint firstItem="4z5-rv-dt5" firstAttribute="firstBaseline" secondItem="T12-Dl-AIC" secondAttribute="firstBaseline" id="EpI-Hm-Zgn"/>
                         <constraint firstAttribute="trailing" secondItem="4z5-rv-dt5" secondAttribute="trailing" constant="16" id="Het-Mj-L75"/>
                         <constraint firstAttribute="trailing" secondItem="R3Z-C2-Sl8" secondAttribute="trailing" constant="18" id="K89-3k-fyf"/>
                         <constraint firstItem="B9J-Ie-tkF" firstAttribute="leading" secondItem="H2N-hP-nly" secondAttribute="leading" constant="16" id="P7I-T3-4Lp"/>
                         <constraint firstAttribute="trailing" secondItem="Ft6-rK-2pD" secondAttribute="trailing" constant="12" id="Vbm-Un-udY"/>
+                        <constraint firstAttribute="bottom" secondItem="CRY-q2-jM3" secondAttribute="top" id="XFq-8g-mIl"/>
                         <constraint firstItem="b09-U0-z1i" firstAttribute="top" secondItem="Iup-8S-5PU" secondAttribute="bottom" id="Zkz-pX-UQ3"/>
                         <constraint firstAttribute="bottom" secondItem="b09-U0-z1i" secondAttribute="bottom" id="aec-eM-3Jb"/>
                         <constraint firstAttribute="trailing" secondItem="b09-U0-z1i" secondAttribute="trailing" id="bEu-0Y-2ly"/>
@@ -143,12 +147,9 @@
                         <constraint firstItem="Iup-8S-5PU" firstAttribute="centerY" secondItem="Ft6-rK-2pD" secondAttribute="centerY" id="gLS-vA-QDG"/>
                         <constraint firstItem="Ft6-rK-2pD" firstAttribute="top" secondItem="R3Z-C2-Sl8" secondAttribute="bottom" constant="16" id="kkE-H2-Hlg"/>
                         <constraint firstItem="b09-U0-z1i" firstAttribute="leading" secondItem="H2N-hP-nly" secondAttribute="leading" id="oFV-Kx-IPy"/>
-                        <constraint firstItem="185-CY-5vZ" firstAttribute="leading" secondItem="H2N-hP-nly" secondAttribute="leading" constant="12" id="p2Y-r0-owz"/>
                         <constraint firstItem="T12-Dl-AIC" firstAttribute="top" secondItem="H2N-hP-nly" secondAttribute="top" constant="17" id="peL-qr-jwT"/>
                         <constraint firstItem="T12-Dl-AIC" firstAttribute="centerX" secondItem="H2N-hP-nly" secondAttribute="centerX" id="qza-G1-QE0"/>
                         <constraint firstItem="B9J-Ie-tkF" firstAttribute="centerY" secondItem="R3Z-C2-Sl8" secondAttribute="centerY" id="u4E-xF-Jqv"/>
-                        <constraint firstItem="bWz-FD-xE4" firstAttribute="centerX" secondItem="H2N-hP-nly" secondAttribute="centerX" id="vur-XI-gom"/>
-                        <constraint firstItem="185-CY-5vZ" firstAttribute="top" secondItem="H2N-hP-nly" secondAttribute="top" id="xkl-DB-e1R"/>
                     </constraints>
                 </view>
             </subviews>
@@ -169,14 +170,6 @@
             <point key="canvasLocation" x="137.68115942028987" y="427.23214285714283"/>
         </view>
     </objects>
-    <designables>
-        <designable name="aEB-TI-R3y">
-            <size key="intrinsicContentSize" width="30" height="34"/>
-        </designable>
-        <designable name="bWz-FD-xE4">
-            <size key="intrinsicContentSize" width="30" height="34"/>
-        </designable>
-    </designables>
     <resources>
         <namedColor name="blackThree">
             <color red="0.063000001013278961" green="0.063000001013278961" blue="0.063000001013278961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -193,5 +186,8 @@
         <namedColor name="whiteTwo">
             <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

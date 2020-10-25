@@ -125,7 +125,7 @@ class GymCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setLayout()
+        setUI()
     }
     
     required init?(coder: NSCoder) {
@@ -148,7 +148,7 @@ class GymCell: UITableViewCell {
         }
     }
     
-    private func setLayout() {
+    private func setUI() {
         selectionStyle = .none
         contentView.backgroundColor = .white
         contentView.addSubview(backgroundImageView)

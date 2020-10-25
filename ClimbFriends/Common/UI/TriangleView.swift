@@ -16,7 +16,7 @@ enum TriangleDirection {
 }
 
 @IBDesignable
-class TriangleView: UIButton {
+class TriangleView: UIView {
     @IBInspectable private var color: UIColor = .gray
     var direction: TriangleDirection = .up
     
@@ -45,7 +45,6 @@ class TriangleView: UIButton {
     fileprivate func initView() {
         self.backgroundColor = .clear
     }
-    
     
     override func draw(_ rect: CGRect) {
         

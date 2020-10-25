@@ -9,10 +9,26 @@
 import UIKit
 
 class RouteListViewController: UIViewController {
+    
+    lazy var routeTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.bouncesZoom = false
+        return tableView
+    }()
+    
+    let celltype: CellType = .routeList
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUI()
+    }
+    
+    fileprivate func setUI() {
         let routes: [GymRoute] = [
             GymRoute(level: 0, levelColor: .red, routeColors: [.red, .blue, .gray, .green, .orange, .brown]),
             GymRoute(level: 0, levelColor: .blue, routeColors: [.red, .blue, .gray, .green, .orange, .brown, .magenta]),
@@ -31,24 +47,50 @@ class RouteListViewController: UIViewController {
         test.backgroundColor = .clear
         self.view.addSubview(test)
 
-        test.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 80).isActive = true
+        test.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 0).isActive = true
         test.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         test.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         self.view.layoutIfNeeded()
         test.routes = routes
+        
+        self.view.addSubview(routeTableView)
+        routeTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive =  true
+        routeTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        routeTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        routeTableView.topAnchor.constraint(equalTo: test.bottomAnchor, constant: 36).isActive = true
+        
+        routeTableView.register(UINib(nibName: celltype.nibName, bundle: nil), forCellReuseIdentifier: celltype.identifier)
+        routeTableView.delegate = self
+        routeTableView.dataSource = self
+        routeTableView.estimatedRowHeight = 300
+        routeTableView.rowHeight = UITableView.automaticDimension
+        routeTableView.reloadData()
+    }
+    
 
-//        let triangle = TriangleView(direction: .down, color: .whiteThree)
-//        triangle.translatesAutoresizingMaskIntoConstraints = false
-//        self.view.addSubview(triangle)
-//
-//        triangle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//        triangle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-//        triangle.widthAnchor.constraint(equalToConstant: 20).isActive = true
-//        triangle.heightAnchor.constraint(equalToConstant: 10).isActive = true
-        
-        
-        
 
+}
+
+extension RouteListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: celltype.identifier, for: indexPath)
+        if let routeCell = cell as? RouteVideoListCell {
+            routeCell.fill()
+            return routeCell
+        }
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
 
