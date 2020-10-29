@@ -15,6 +15,9 @@ class RouteListViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
+        tableView.backgroundColor = .white
+        tableView.separatorInsetReference = .fromAutomaticInsets
+        tableView.allowsMultipleSelectionDuringEditing = false
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.bouncesZoom = false
@@ -62,7 +65,7 @@ class RouteListViewController: UIViewController {
         routeTableView.register(UINib(nibName: celltype.nibName, bundle: nil), forCellReuseIdentifier: celltype.identifier)
         routeTableView.delegate = self
         routeTableView.dataSource = self
-        routeTableView.estimatedRowHeight = 300
+        routeTableView.estimatedRowHeight = 600
         routeTableView.rowHeight = UITableView.automaticDimension
         routeTableView.reloadData()
     }

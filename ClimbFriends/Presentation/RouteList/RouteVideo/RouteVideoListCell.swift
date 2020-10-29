@@ -15,6 +15,13 @@ class RouteVideoListCell: UITableViewCell {
     @IBOutlet weak var levelColorView: LevelColorView!
     @IBOutlet weak var routeColorView: UIView!
     @IBOutlet weak var videoCollectionView: UICollectionView!
+    @IBOutlet weak var dividerView: UIView!
+    
+    var isHiddenDivider: Bool = false {
+        didSet {
+            dividerView.isHidden = isHiddenDivider
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

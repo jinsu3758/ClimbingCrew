@@ -42,7 +42,7 @@ class VideoCell: UICollectionViewCell {
         thumbNailImageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
         
         heartButton.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 12).isActive = true
-        heartButton.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 14).isActive = true
+        heartButton.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -14).isActive = true
         heartButton.widthAnchor.constraint(equalToConstant: 14).isActive = true
         heartButton.heightAnchor.constraint(equalToConstant: 14).isActive = true
     }
