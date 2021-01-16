@@ -8,7 +8,9 @@
 
 import UIKit
 
-class RouteListViewController: UIViewController {
+class RouteListViewController: UIViewController, ViewModelBindable {
+    
+    var viewModel: RouteListViewModelType!
     
     lazy var routeTableView: UITableView = {
         let tableView = UITableView()
@@ -20,15 +22,25 @@ class RouteListViewController: UIViewController {
         tableView.allowsMultipleSelectionDuringEditing = false
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(UINib(nibName: celltype.nibName, bundle: nil), forCellReuseIdentifier: celltype.identifier)
+        tableView.estimatedRowHeight = 600
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.bouncesZoom = false
         return tableView
     }()
     
-    let celltype: CellType = .routeList
+    let celltype: RouteListCellType = .routeList
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+    }
+    
+    func bindViewModel() {
+        
     }
     
     fileprivate func setUI() {
@@ -57,16 +69,13 @@ class RouteListViewController: UIViewController {
         test.routes = routes
         
         self.view.addSubview(routeTableView)
+        
         routeTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive =  true
         routeTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         routeTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         routeTableView.topAnchor.constraint(equalTo: test.bottomAnchor, constant: 36).isActive = true
         
-        routeTableView.register(UINib(nibName: celltype.nibName, bundle: nil), forCellReuseIdentifier: celltype.identifier)
-        routeTableView.delegate = self
-        routeTableView.dataSource = self
-        routeTableView.estimatedRowHeight = 600
-        routeTableView.rowHeight = UITableView.automaticDimension
+        
         routeTableView.reloadData()
     }
     
@@ -82,6 +91,7 @@ extension RouteListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: celltype.identifier, for: indexPath)
         if let routeCell = cell as? RouteVideoListCell {
+            routeCell.dividerView.isHidden = indexPath.item == 0
             routeCell.fill()
             return routeCell
         }

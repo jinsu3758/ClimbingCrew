@@ -9,18 +9,21 @@
 /* Begin PBXBuildFile section */
 		05A3DC8C8F8600E4258A1C09 /* Pods_ClimbFriendsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AF44C5EBC22E03773D101B /* Pods_ClimbFriendsTests.framework */; };
 		27E97CD5B1BD28EEC4A41DEE /* Pods_ClimbFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C3901DB0678BB1DDF741E2 /* Pods_ClimbFriends.framework */; };
+		74362CA725B1AB2A00EF65C7 /* RouteListCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74362CA625B1AB2A00EF65C7 /* RouteListCellType.swift */; };
 		7470E0FD251741D3001FCF34 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470E0FC251741D3001FCF34 /* Scene.swift */; };
 		7470E102251748CB001FCF34 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470E101251748CB001FCF34 /* SceneCoordinator.swift */; };
 		7470E10725174A19001FCF34 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470E10625174A19001FCF34 /* HomeViewModel.swift */; };
 		7470E10F25174A5C001FCF34 /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470E10E25174A5C001FCF34 /* ViewModelBindable.swift */; };
 		7470E13A2518D29E001FCF34 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470E1392518D29E001FCF34 /* BaseViewModel.swift */; };
 		7476523C2513885800A49219 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476523B2513885800A49219 /* UIColorExtension.swift */; };
-		747652452514CD2500A49219 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747652442514CD2500A49219 /* CellType.swift */; };
 		74916E662545621400D7C50F /* RouteVideoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74916E642545621400D7C50F /* RouteVideoListCell.swift */; };
 		74916E672545621400D7C50F /* RouteVideoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74916E652545621400D7C50F /* RouteVideoListCell.xib */; };
 		74916E6C254574DC00D7C50F /* LevelColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74916E6B254574DC00D7C50F /* LevelColorView.swift */; };
 		74916E712545886700D7C50F /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74916E702545886700D7C50F /* VideoCell.swift */; };
 		749B407E2548225F00399DC7 /* DynamicHeightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B407D2548225F00399DC7 /* DynamicHeightCollectionView.swift */; };
+		74AEE35B25B2F897003A2565 /* EndPointable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AEE35A25B2F897003A2565 /* EndPointable.swift */; };
+		74AEE36325B2F8A1003A2565 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AEE36225B2F8A1003A2565 /* ApiService.swift */; };
+		74AEE37C25B30316003A2565 /* RouteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AEE37B25B30316003A2565 /* RouteListViewModel.swift */; };
 		74E28DE8250F7EF300C497ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28DE7250F7EF300C497ED /* AppDelegate.swift */; };
 		74E28DEC250F7EF300C497ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E28DEB250F7EF300C497ED /* ViewController.swift */; };
 		74E28DEF250F7EF300C497ED /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E28DED250F7EF300C497ED /* Splash.storyboard */; };
@@ -69,18 +72,21 @@
 		12C3901DB0678BB1DDF741E2 /* Pods_ClimbFriends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClimbFriends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B1C1F39B7CF9113D1E090E /* Pods-ClimbFriendsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimbFriendsTests.release.xcconfig"; path = "Target Support Files/Pods-ClimbFriendsTests/Pods-ClimbFriendsTests.release.xcconfig"; sourceTree = "<group>"; };
 		68DF4B4C10EF106E8E4C1D8D /* Pods-ClimbFriends-ClimbFriendsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClimbFriends-ClimbFriendsUITests.release.xcconfig"; path = "Target Support Files/Pods-ClimbFriends-ClimbFriendsUITests/Pods-ClimbFriends-ClimbFriendsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		74362CA625B1AB2A00EF65C7 /* RouteListCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListCellType.swift; sourceTree = "<group>"; };
 		7470E0FC251741D3001FCF34 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		7470E101251748CB001FCF34 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		7470E10625174A19001FCF34 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		7470E10E25174A5C001FCF34 /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
 		7470E1392518D29E001FCF34 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		7476523B2513885800A49219 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		747652442514CD2500A49219 /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
 		74916E642545621400D7C50F /* RouteVideoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteVideoListCell.swift; sourceTree = "<group>"; };
 		74916E652545621400D7C50F /* RouteVideoListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteVideoListCell.xib; sourceTree = "<group>"; };
 		74916E6B254574DC00D7C50F /* LevelColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelColorView.swift; sourceTree = "<group>"; };
 		74916E702545886700D7C50F /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		749B407D2548225F00399DC7 /* DynamicHeightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionView.swift; sourceTree = "<group>"; };
+		74AEE35A25B2F897003A2565 /* EndPointable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointable.swift; sourceTree = "<group>"; };
+		74AEE36225B2F8A1003A2565 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		74AEE37B25B30316003A2565 /* RouteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListViewModel.swift; sourceTree = "<group>"; };
 		74E28DE4250F7EF300C497ED /* ClimbFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClimbFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E28DE7250F7EF300C497ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74E28DEB250F7EF300C497ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 		747652412514CBF700A49219 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				74AEE37725B302C1003A2565 /* Base */,
+				74AEE37625B302B7003A2565 /* Protocol */,
 				747652422514CBFE00A49219 /* UI */,
 			);
 			path = Common;
@@ -156,9 +164,6 @@
 		747652422514CBFE00A49219 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				747652432514CCC200A49219 /* Enums */,
-				7470E10E25174A5C001FCF34 /* ViewModelBindable.swift */,
-				7470E1392518D29E001FCF34 /* BaseViewModel.swift */,
 				74EC99392534871D00BBC7A3 /* TriangleView.swift */,
 				74916E6B254574DC00D7C50F /* LevelColorView.swift */,
 				749B407D2548225F00399DC7 /* DynamicHeightCollectionView.swift */,
@@ -166,22 +171,47 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		747652432514CCC200A49219 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				747652442514CD2500A49219 /* CellType.swift */,
-			);
-			path = Enums;
-			sourceTree = "<group>";
-		};
 		74916E60254560FD00D7C50F /* RouteVideo */ = {
 			isa = PBXGroup;
 			children = (
-				74916E642545621400D7C50F /* RouteVideoListCell.swift */,
 				74916E652545621400D7C50F /* RouteVideoListCell.xib */,
+				74916E642545621400D7C50F /* RouteVideoListCell.swift */,
 				74916E702545886700D7C50F /* VideoCell.swift */,
 			);
 			path = RouteVideo;
+			sourceTree = "<group>";
+		};
+		74AEE35925B2F85F003A2565 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				74AEE36825B2F95E003A2565 /* EndPoints */,
+				74AEE36225B2F8A1003A2565 /* ApiService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		74AEE36825B2F95E003A2565 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				74AEE35A25B2F897003A2565 /* EndPointable.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		74AEE37625B302B7003A2565 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7470E10E25174A5C001FCF34 /* ViewModelBindable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		74AEE37725B302C1003A2565 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7470E1392518D29E001FCF34 /* BaseViewModel.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		74B582932542B788007CC6D9 /* LevelGuideView */ = {
@@ -218,6 +248,7 @@
 		74E28DE6250F7EF300C497ED /* ClimbFriends */ = {
 			isa = PBXGroup;
 			children = (
+				74AEE35925B2F85F003A2565 /* Network */,
 				74EC9842252AFBF100BBC7A3 /* Resources */,
 				747652412514CBF700A49219 /* Common */,
 				74E28E26250F913E00C497ED /* Coordinator */,
@@ -273,9 +304,9 @@
 			isa = PBXGroup;
 			children = (
 				74E28E27250F91EA00C497ED /* Gym */,
+				74E28E1E250F8F4000C497ED /* Home.storyboard */,
 				74E28E1C250F8F3600C497ED /* HomeViewController.swift */,
 				7470E10625174A19001FCF34 /* HomeViewModel.swift */,
-				74E28E1E250F8F4000C497ED /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -346,10 +377,12 @@
 		74EC99252531B85600BBC7A3 /* RouteList */ = {
 			isa = PBXGroup;
 			children = (
+				74EC992E2531BA1100BBC7A3 /* RouteList.storyboard */,
+				74EC99262531BA0700BBC7A3 /* RouteListViewController.swift */,
+				74AEE37B25B30316003A2565 /* RouteListViewModel.swift */,
+				74362CA625B1AB2A00EF65C7 /* RouteListCellType.swift */,
 				74916E60254560FD00D7C50F /* RouteVideo */,
 				74B582932542B788007CC6D9 /* LevelGuideView */,
-				74EC99262531BA0700BBC7A3 /* RouteListViewController.swift */,
-				74EC992E2531BA1100BBC7A3 /* RouteList.storyboard */,
 			);
 			path = RouteList;
 			sourceTree = "<group>";
@@ -629,18 +662,21 @@
 				74EC9862252B0B2D00BBC7A3 /* StringExtension.swift in Sources */,
 				74EC9921253192C200BBC7A3 /* IntExtension.swift in Sources */,
 				7470E10F25174A5C001FCF34 /* ViewModelBindable.swift in Sources */,
+				74362CA725B1AB2A00EF65C7 /* RouteListCellType.swift in Sources */,
 				7470E0FD251741D3001FCF34 /* Scene.swift in Sources */,
 				74EC9831252AE11000BBC7A3 /* CALayerExtension.swift in Sources */,
 				74E28DEC250F7EF300C497ED /* ViewController.swift in Sources */,
 				74EC993A2534871D00BBC7A3 /* TriangleView.swift in Sources */,
+				74AEE35B25B2F897003A2565 /* EndPointable.swift in Sources */,
 				749B407E2548225F00399DC7 /* DynamicHeightCollectionView.swift in Sources */,
-				747652452514CD2500A49219 /* CellType.swift in Sources */,
 				7470E13A2518D29E001FCF34 /* BaseViewModel.swift in Sources */,
 				74916E712545886700D7C50F /* VideoCell.swift in Sources */,
+				74AEE37C25B30316003A2565 /* RouteListViewModel.swift in Sources */,
 				74E28DE8250F7EF300C497ED /* AppDelegate.swift in Sources */,
 				74E28E25250F90EE00C497ED /* UIViewExtension.swift in Sources */,
 				74EC99272531BA0700BBC7A3 /* RouteListViewController.swift in Sources */,
 				74EC9868252B21B200BBC7A3 /* GymRoute.swift in Sources */,
+				74AEE36325B2F8A1003A2565 /* ApiService.swift in Sources */,
 				74E28E1D250F8F3600C497ED /* HomeViewController.swift in Sources */,
 				74E28E2D250F9E8700C497ED /* GymCell.swift in Sources */,
 				7470E102251748CB001FCF34 /* SceneCoordinator.swift in Sources */,

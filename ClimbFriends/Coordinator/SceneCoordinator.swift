@@ -18,6 +18,12 @@ protocol CoordinatorType {
     func close(to scene: Scene?, animated: Bool, completion: (() -> Void)?)
 }
 
+extension CoordinatorType {
+    func transition(to scene: Scene, style: TransitionStyle, animated: Bool, completion: (() -> Void)? = nil) {
+        transition(to: scene, style: style, animated: animated, completion: completion)
+    }
+}
+
 class SceneCoordinator: CoordinatorType {
     
     private var currentViewController: UIViewController
@@ -28,7 +34,7 @@ class SceneCoordinator: CoordinatorType {
         self.currentViewController = navigationController
     }
     
-    func transition(to scene: Scene, style: TransitionStyle, animated: Bool, completion:  (() -> Void)?) {
+    func transition(to scene: Scene, style: TransitionStyle, animated: Bool, completion:  (() -> Void)? = nil) {
         let viewController = scene.viewController(coordinator: self)
         
         switch style {
@@ -54,6 +60,4 @@ class SceneCoordinator: CoordinatorType {
             completion?()
         }
     }
-    
-    
 }

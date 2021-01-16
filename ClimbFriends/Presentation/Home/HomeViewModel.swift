@@ -8,6 +8,30 @@
 
 import Foundation
 
-class HomeViewModel: BaseViewModel {
+protocol HomeViewModelInput {
+    func selectItem(index: Int)
+}
+
+protocol HomeViewModelOutput {
+    var output: (() -> Void)? { get }
+}
+
+protocol HomeViewModelType: HomeViewModelInput, HomeViewModelOutput {
     
+}
+
+class HomeViewModel: BaseViewModel, HomeViewModelType {
+    var output: (() -> Void)?
+    
+    
+}
+
+extension HomeViewModel {
+    func selectItem(index: Int) {
+        let routeListViewModel = RouteListViewModel(coordinator: coordinator)
+        let routeListScene = Scene.routeList(routeListViewModel)
+        coordinator.transition(to: routeListScene, style: .push, animated: true)
+        
+//        output?()
+    }
 }

@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController, ViewModelBindable {
     @IBOutlet weak var gymTableView: UITableView!
     
-    var viewModel: HomeViewModel!
+    var viewModel: HomeViewModelType!
     
     override func viewDidLoad() {
         super.viewDidLoad()

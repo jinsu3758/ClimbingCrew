@@ -12,10 +12,12 @@ class RouteVideoListCell: UITableViewCell {
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var videoCountLabel: UILabel!
+    @IBOutlet weak var videoCollectionView: DynamicHeightCollectionView!
     @IBOutlet weak var levelColorView: LevelColorView!
     @IBOutlet weak var routeColorView: UIView!
-    @IBOutlet weak var videoCollectionView: UICollectionView!
     @IBOutlet weak var dividerView: UIView!
+    
+    private let celltype = RouteListCellType.video
     
     var isHiddenDivider: Bool = false {
         didSet {
@@ -25,9 +27,10 @@ class RouteVideoListCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        videoCollectionView.register(VideoCell.self, forCellWithReuseIdentifier: CellType.video.identifier)
+        videoCollectionView.register(VideoCell.self, forCellWithReuseIdentifier: celltype.identifier)
         videoCollectionView.delegate = self
         videoCollectionView.dataSource = self
+        videoCollectionView.cellHeight = celltype.size.height
     }
     
     func fill() {
@@ -42,7 +45,7 @@ extension RouteVideoListCell: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellType.video.identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: celltype.identifier, for: indexPath)
         if let videoCell = cell as? VideoCell {
             videoCell.fill()
             return videoCell
@@ -51,16 +54,15 @@ extension RouteVideoListCell: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CellType.video.size
+        return celltype.size
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 7
     }
     
-    
-    
-    
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 6
+    }
     
 }

@@ -10,18 +10,23 @@ import UIKit
 
 enum Scene {
     case home(HomeViewModel)
+    case routeList(RouteListViewModel)
     
     var storyboardName: String {
         switch self {
-        case .home(_):
+        case .home:
             return "Home"
+        case .routeList:
+            return "RouteList"
         }
     }
     
     var identifier: String {
         switch self {
-        case .home(_):
+        case .home:
             return "homeViewController"
+        case .routeList:
+            return "routeListViewController"
         }
     }
     
@@ -32,7 +37,10 @@ enum Scene {
         switch self {
         case .home(let viewModel):
             guard var vc = viewController as? HomeViewController else { break }
-//            let viewModel = HomeViewModel(coordinator: coordinator)
+            vc.bind(viewModel: viewModel)
+            return vc
+        case .routeList(let viewModel):
+            guard var vc = viewController as? RouteListViewController else { break }
             vc.bind(viewModel: viewModel)
             return vc
         }
